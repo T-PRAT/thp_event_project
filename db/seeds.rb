@@ -10,3 +10,13 @@ Event.delete_all
 		email: fn + "@yopmail.com",
 		encrypted_password: Faker::Internet.password)
 end
+
+15.times do
+	Event.create(
+		start_date: Faker::Date.forward(days: 100),
+		duration: rand(3..20) * 5,
+		title: Faker::Movies::Hobbit.location,
+		description: Faker::Movies::Hobbit.quote,
+		price: rand(1..1000),
+		location: Faker::Address.city)
+end

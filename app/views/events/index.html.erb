@@ -1,0 +1,52 @@
+<div class="jumbotron">
+	<div class="container">
+		<h1 class="display-3">Hello, world!</h1>
+		<p>This is a template for a simple marketing or informational website. It includes a large callout called a
+			jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+			unique.</p>
+		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+	</div>
+
+</div>
+<div class="container">
+	<div class="row">
+    <% @events.each do |event| %>
+		<div class="col-sm-6" style="padding: 15px;">
+		<div class="card">
+          <div class="card-header">
+            <h2><%= event.title %></h2>
+          </div>
+          <div class="card-body">
+            <p class="text"><%= event.description%></p>
+				<div class="row">
+					<div class="col-sm-6">
+					<table class="table table-hover">
+						<tr class="table-secondary">
+							<th>Début</th>
+							<td><%= event.start_date.ctime%></td>
+						</tr>
+						<tr class="table-light">
+							<th>Durée</th>
+							<td><%= event.duration%> min</td>
+						</tr>
+					</table>
+					</div>
+					<div class="col-sm-6">
+					<table class="table table-hover">
+						<tr class="table-secondary">
+							<th>Prix</th>
+							<td><%= event.price%> €</td>
+						</tr>
+						<tr class="table-light">
+							<th>Lieux</th>
+							<td><%= event.location%></td>
+						</tr>
+					</table>
+          			</div>
+          		</div>
+        	</div>
+		</div>
+		</div>
+		<% end %>
+	</div>
+</div>
