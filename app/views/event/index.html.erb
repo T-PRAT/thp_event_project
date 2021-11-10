@@ -4,7 +4,10 @@
 		<p>This is a template for a simple marketing or informational website. It includes a large callout called a
 			jumbotron and three supporting pieces of content. Use it as a starting point to create something more
 			unique.</p>
-		<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+
+      <% if user_signed_in? %>
+		<%= link_to "Créer un événement", new_event_path, :class=>"btn btn-lg btn-success" %>
+      <% end %>
 	</div>
 
 </div>

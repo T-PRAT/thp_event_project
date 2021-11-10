@@ -1,6 +1,9 @@
 @import "bootstrap";
 @import "bootstrap.min.scss";
 
+html, body {
+	overflow-x: hidden;
+}
 body {
 	padding-top: 70px;
 }

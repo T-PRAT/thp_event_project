@@ -1,0 +1,22 @@
+<div class="container" style="border-radius: 5px;">
+	<div class="row justify-content-center">
+		<div class="card">
+        	<h3 class="card-header text-center">Créer un événement</h3>
+    		<div class="card-body">
+			<%= form_tag url_for(action: "create"), method: "post" do %>
+				<div class="form-group">
+					<label for="titre" class="form-label mt-4">Titre</label>
+					<%= search_field_tag 'title', nil, class: "form-control" %>
+				</div>
+				<div class="form-group">
+					<label for="contenu" class="form-label mt-4">Contenu</label>
+					<%= text_area_tag 'content', nil, class: "form-control" %>
+				</div>
+				<div class="row justify-content-center">
+					<%= submit_tag "Créer l'événement", class: "btn btn-primary", style: "width: 300px; margin-top: 20px;" %>
+				</div>
+   			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

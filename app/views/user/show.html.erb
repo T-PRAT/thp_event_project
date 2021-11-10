@@ -1,0 +1,45 @@
+<div class="container-xl" style="border-radius: 5px;">
+	<div class="row justify-content-center">
+		<div class="card" style="width: 50rem;">
+			<div class="card-header text-center">
+				<h3 class="title">Description de l'utilisateur</h3>
+			</div>
+			<div class="card-body">
+				<table class="table table-hover text-muted">
+					<tr class="table-primary">
+						<th scope="row">Nom</th>
+						<th><%= @user.last_name %></th>
+					</tr>
+					<tr class="table-light">
+						<th scope="row">Prénom</th>
+						<th><%= @user.first_name %></th>
+					</tr>
+					<tr class="table-primary">
+						<th scope="row">email</th>
+						<th><%= @user.email %></th>
+					</tr>
+					<tr class="table-light">
+						<th scope="row">Description</th>
+						<th><%= @user.description %></th>
+					</tr>
+					<tr>
+						<th scope="row">Crée le</th>
+						<th><%= @user.created_at %></th>
+					</tr>
+					<tr>
+						<th scope="row">Derniere modification</th>
+						<th><%= @user.updated_at %></th>
+					</tr>
+					</tr>
+				</table>
+				<div class="row">
+				<div class="btn-group">
+   	       			<%= link_to "Modifier ", edit_user_registration_path, :class=>"btn btn-lg btn-warning" %>
+           			<%= link_to "Supprimer", cancel_user_registration_path, :class=>"btn btn-lg btn-danger" %>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
